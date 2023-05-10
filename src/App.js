@@ -10,12 +10,12 @@ import ExpenseList from './components/ExpenseList';
 import ExpenseItem from './components/ExpenseItem';
 import AllocationForm from './components/AllocationForm';
 import CurrencyDropdown from './components/CurrencyDropdown';
-import store from './components/CurrencyDropdown';
+import DecreaseBtn from './components/DecreaseBtn'
 
 import { AppProvider } from './context/AppContext';
 const App = () => {
     return (
-        <AppProvider store={store}>
+        <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
                 <div className='row mt-4'>
@@ -32,8 +32,6 @@ const App = () => {
                         <CurrencyDropdown/>
                     </div>
                 </div>
-               
-                    
                     <div className='col-sm'>
                         <ExpenseList />
                     </div>
@@ -43,6 +41,7 @@ const App = () => {
                     <div className='col-sm'>
                         <AllocationForm />
                     </div>
+                    <DecreaseBtn/>
                 </div>
         </AppProvider>
     );
