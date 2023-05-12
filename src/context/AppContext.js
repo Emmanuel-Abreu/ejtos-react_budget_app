@@ -77,6 +77,38 @@ export const AppReducer = (state, action) => {
                 currencySymbol: action.payload[0]
             };
 
+        case 'INCREASE_EXPENSE':
+            action.type = 'DONE'
+
+            const expenseToIncrease = state.expenses.map((currentExp)=> {
+                if (currentExp.name === action.payload.name){
+                    const newCost = currentExp.cost + action.payload.cost
+                }
+                return currentExp;
+            })
+            
+            return{
+                ...state,
+                expenses: expenseToIncrease,
+            }
+        ;
+        
+        case 'DECREASE_EXPENSE':
+            action.type = 'DONE'
+
+            const expenseToDecrease = state.expenses.map((currentExp)=> {
+                if (currentExp.name === action.payload.name){
+                    const newCost = currentExp.cost - action.payload.cost
+                }
+                return currentExp;
+            })
+            
+            return{
+                ...state,
+                expenses: expenseToDecrease,
+            }
+        ;
+
         default:
             return state;
     }

@@ -41,7 +41,6 @@ const App = () => {
                     <div className='col-sm'>
                         <AllocationForm />
                     </div>
-                    <DecreaseBtn/>
                 </div>
         </AppProvider>
     );

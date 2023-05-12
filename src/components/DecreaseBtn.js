@@ -1,15 +1,17 @@
 import React from "react";
 
 import '../assets/styles/DecreaseBtn.css'
-import '../assets/styles/DecreaseBtnContainer.css'
 
 const DecreaseBtn = () => {
+
+  const buttonClickedMsg = () => {
+    console.log("clicked")
+  }
+
   return (
-    <div className="DeleteBtnContainer">
-      <div className="DeleteBtn">
+      <button onClick={buttonClickedMsg} className="DecreaseBtn">
         -
-      </div>
-    </div>
+      </button>
   );
 }
 

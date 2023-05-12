@@ -1,5 +1,5 @@
-.DecreaseBtn{
-  background-color: red;
+.IncreaseBtn{
+  background-color: green;
   height: 40px;
   width: 40px;
   color: #fff;
@@ -7,8 +7,9 @@
   font-weight: bolder;
   text-align: center;
   padding-top: 0px;
+  padding-right: 30px;
   padding-bottom: 65px;
   shape-outside: circle(75%);
   clip-path: circle();
-  border: 1px solid red;
+  border: 1px solid green;
 }
